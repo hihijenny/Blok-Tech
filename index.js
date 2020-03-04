@@ -1,24 +1,46 @@
 const express = require('express');
 const app = express();
+const ejs = require("ejs");
+// const slug = require("slug");
+// const bodyParser = require("bodyParser");
 const port = 3000;
 
-app.use(express.static('public'))
+var data = [
+  {
+  id: "fight-club",
+  title: "Fight Club",
+  summary: "Really good movie with Edward Norton and Brad Pitt."
+},
 
-// app.get('/', (req, res) => {
-//   app.use(express.static("public"));
-// })
+{
+  id: "american-history-x",
+  title: "American History X",
+  summary: "Another really good movie with Edward Norton."
+}, 
 
-// app.get('/about', (req, res) => {
-//   res.send("hoi");
-// })
+{ 
+  id: "the-hulk",
+  title: "The Hulk",
+  summary: "This movie is ok. I'd give it 3 stars just because Edward Norton is starring in it"
+}  
+]
 
-// app.get('/index', (req, res) => {
-//   res.send("index");
-// });
+app
+  .use(express.static("public"))
+  .set("view engine", "ejs")
+  .set("views", "view")
 
-//404 error
+app.get("/list", (req, res) => {
+  res.render("list.ejs", {
+    data
+  })
+
+});
 
 app.use(function(req, res) {
   res.send("404: Page not found", 404);
 });
-app.listen(port, () => console.log(`running on port ${port}`))
+
+
+
+app.listen(port, () => console.log(`app running on port: ${port}`));
