@@ -1,7 +1,44 @@
-body { 
-    background-color: pink;
+* {
+    margin: 0;
+    list-style-type: none;
 }
 
-h1 {
-    font-size: 4em;
+html {
+    width: 100%;
+}
+
+body {
+    background-color: white;
+}
+
+/*HIER BEGINT DE HEADER*/ 
+
+header { 
+    height: 15vw;
+    width: 100%;
+    background-color: #FFE5D8;
+}
+
+ul { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+li {
+    margin: 4%;
+}
+
+a img {
+    height: 7vw;
+}
+
+/*HIER BEGINT DE MAIN*/ 
+
+.choice {
+    width: 95%;
+}
+
+main img {
+    width: 100%;
 }

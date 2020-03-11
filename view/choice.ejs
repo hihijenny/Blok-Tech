@@ -10,18 +10,20 @@
     <body>
 
       <%- include("header.ejs") %>
+<main>
+  <section class="choice">
+   <h1>What do you like the most?</h1>
+   <p>To get an idea about what you like you can choose one of
+     the delicious foods displayed below.
+   </p>
+<form action=/ method="post">
+  <input type="image" src= <%= images.img1 %> >
+  <input type="image" src= <%= images.img2 %> >
+</form>
+</section>
 
-    <title>Een website met films</title>
-   <% for (var i = 0; i < data.length; i++) { %>
+</main>
 
-    <h1> <a href="/<%= data[i].id %>">
-        <%= data[i].naam %>
-      </a></h1>
-    <h2> <%= data[i].leeftijd %> </h2>
-    <p> <%= data[i].bio %> </p>
-
-  <% } %>
-  
-        
     </body>
+
 </html>

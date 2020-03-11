@@ -5,25 +5,61 @@ const ejs = require("ejs");
 // const bodyParser = require("bodyParser");
 const port = 3000;
 
-var data = [
-  {
-  id: "fight-club",
-  title: "Fight Club",
-  summary: "Really good movie with Edward Norton and Brad Pitt."
-},
+// const data = [
+//   {
+//   id: "sjoerd-bindels",
+//   naam: "Sjoerd Bindels",
+//   leeftijd: "23",
+//   bio: "Hoi ik ben Sjoerd"
+// },
 
-{
-  id: "american-history-x",
-  title: "American History X",
-  summary: "Another really good movie with Edward Norton."
-}, 
+// {
+//   id: "tess-smit",
+//   naam: "Tess Smit",
+//   leeftijd: "19",
+//   bio: "Hoi ik ben Tess"
+// }, 
 
-{ 
-  id: "the-hulk",
-  title: "The Hulk",
-  summary: "This movie is ok. I'd give it 3 stars just because Edward Norton is starring in it"
-}  
-]
+// { 
+//   id: "sam-slotemaker",
+//   naam: "Sam Slotemaker",
+//   leeftijd: "19",
+//   bio: "Hoi ik ben Sam"
+// }  
+// ]
+
+
+
+
+const choices = [ 
+  "images/burrito.jpg", 
+  "images/tacos.jpg",
+  "images/burger.jpg",
+  "images/hot-dog.jpg",
+  "images/pasta.jpg",
+  "images/pizza.jpeg"
+ ]
+
+const random = () => {
+  return Math.floor(Math.random() * choices.length)
+}
+
+let image1 = random();
+let image2 = random(); 
+
+const images = {
+  id: "afbeeldingen",
+  img1: choices[image1],
+  img2: choices[image2]
+}
+
+while (image1 === image2) {
+  image1 = random()
+}
+
+
+console.log(image1);
+console.log(image2);
 
 app
   .use(express.static("public"))
@@ -35,6 +71,10 @@ app.get("/list", (req, res) => {
     data
   })
 
+});
+
+app.get("/choice", (req, res) => {
+  res.render("choice.ejs", {images})
 });
 
 app.use(function(req, res) {
