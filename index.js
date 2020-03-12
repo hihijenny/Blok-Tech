@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const ejs = require("ejs");
+// const mongo = require("mongodb");
 // const slug = require("slug");
-// const bodyParser = require("bodyParser");
+// const bodyParser = require("body-parser");
 const port = 3000;
 
 // const data = [
@@ -28,8 +29,10 @@ const port = 3000;
 // }  
 // ]
 
+// require("dotenv").config()
 
-
+// let db = null
+// let url = "mongodb//" + process.env.DB_HOST + ":" + process.env.DB_PORT
 
 const choices = [ 
   "images/burrito.jpg", 

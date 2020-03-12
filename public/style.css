@@ -36,9 +36,28 @@ a img {
 /*HIER BEGINT DE MAIN*/ 
 
 .choice {
-    width: 95%;
+    width: 100%;
 }
 
 main img {
     width: 100%;
 }
+
+
+/*/ FORMFIELD /*/ 
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+[type=radio] + img { 
+    cursor: pointer;
+}
+
+[type=radio]:checked + img {
+    filter: grayscale(100%);
+}
+

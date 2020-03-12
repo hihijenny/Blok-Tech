@@ -17,8 +17,20 @@
      the delicious foods displayed below.
    </p>
 <form action=/ method="post">
-  <input type="image" src= <%= images.img1 %> >
-  <input type="image" src= <%= images.img2 %> >
+
+  <label>
+  <input class="choice1" type="radio" name="optie>" value="keuze1">
+  <img src= <%= images.img1 %>>
+</label>
+
+<label>
+  <input type="radio" name="optie>" value="keuze2">
+  <img src= <%= images.img2 %>>
+</label>
+
+<button> Choose this</button>
+
+
 </form>
 </section>
 
