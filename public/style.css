@@ -16,27 +16,27 @@ body {
 header { 
     height: 15vw;
     width: 100%;
-    background-color: #FFE5D8;
+    background-color: #FEA49A;
 }
 
-ul { 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-li {
-    margin: 4%;
-}
-
-a img {
-    height: 7vw;
+header img {
+    width: 20%;
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    transform: translate(-50%, -50%);
 }
 
 /*HIER BEGINT DE MAIN*/ 
 
+h1 {
+    font-family: 'Alatsi', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+}
 .choice {
     width: 100%;
+    margin: 6% auto;
 }
 
 main img {
@@ -61,3 +61,85 @@ main img {
     filter: grayscale(100%);
 }
 
+
+button {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+
+    height: 10vw;
+    width: 30vw;
+    background-color: #FFBAAC;
+    border: none;
+    border-radius: 5px;
+    
+    position: absolute;
+    left: 50%;
+    top: 83%;
+    transform: translate(-50%);
+
+}
+
+/*/FOOTER/*/
+
+footer {
+    height: 20vw;
+    width: 100vw;
+    background-color: #3E3E3E;
+    position: absolute;
+    bottom: 0;
+}
+
+ul {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 4%;
+}
+
+@media only screen and (min-width: 720px) {
+    header {
+        height: 3vw;
+    }
+
+    header img {
+        width: 8%;
+        left: 7%;
+        top: 3%;
+    }
+
+    /* MAIN */
+    form {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+
+        margin: auto;
+    }
+    
+    label {
+        width: 100%;
+    }
+    main img {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+   
+    button {
+        height: 4vw;
+        width: 10vw;
+        top: 75%;
+    }
+
+    button:hover {
+        background-color: #FEA49A;
+        cursor: pointer;
+    }
+
+    footer {
+        display: none;
+    }
+}
