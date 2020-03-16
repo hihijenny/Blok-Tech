@@ -42,6 +42,7 @@ const choices = [
 const random = () => {
   return Math.floor(Math.random() * choices.length) 
 };
+
 //toewijzen van een random img aan de variabele
 let image1 = random();
 let image2 = random(); 
@@ -76,7 +77,7 @@ app
   .get ("/choice", choice)
 
   
-//route
+
 function choice(req, res)  {
   res.render("choice.ejs", {data})
 }
@@ -88,7 +89,7 @@ function sendChoice(req, res) {
  console.log(req.body.food);
    res.redirect('/choice')
  
-   // console.log(answer)
+   
  };
 
 //404 foutmelding
