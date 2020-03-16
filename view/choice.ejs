@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
+
+  
+<%- include("head.ejs") %>
     <body>
 
       <%- include("header.ejs") %>
+
 <main>
   <section class="choice">
    <h1>What do you like the most?</h1>
    <p>To get an idea about what you like you can choose one of
      the delicious foods displayed below.
    </p>
-<form action=/ method="post">
+<form action=/sendChoice method="POST">
 
   <label>
-  <input class="choice1" type="radio" name="optie>" value="keuze1">
-  <img src= <%= images.img1 %>>
+  <input class="choice1" type="radio" name="food>" value="1">
+  <img src= <%= data.img1 %>>
 </label>
 
 <label>
-  <input type="radio" name="optie>" value="keuze2">
-  <img src= <%= images.img2 %>>
+  <input type="radio" name="food>" value="2">
+  <img src= <%= data.img2 %>>
 </label>
 
-<button> Choose this</button>
+<button type="submit"> Choose this</button>
 
 
 </form>
@@ -36,6 +32,8 @@
 
 </main>
 
+
+<script src="index.js"></script>
     </body>
 
 </html>
