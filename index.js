@@ -23,7 +23,7 @@ client.connect(function (err, client) {
   collection = client.db("blok-tech").collection("sendChoice");
 })
 
-mongo.MongoClient.connect(url, function (err, client){
+mongo.MongoClient.connect(uri, function (err, client){
   if(err) throw errdb = client.db(process.nextTick.DB_)
 })
 
@@ -82,14 +82,14 @@ function choice(req, res)  {
 }
 
 function sendChoice(req, res) {
-  data.push({
+  collection.insertOne({
     food: req.body.food
-  });
-
-  res.redirect('/choice')
-
-  console.log(answer)
-};
+  })
+ console.log(req.body.food);
+   res.redirect('/choice')
+ 
+   // console.log(answer)
+ };
 
 //404 foutmelding
 app.use(function(req, res) {
