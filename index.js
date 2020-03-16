@@ -8,8 +8,25 @@ const port = 3000;
 
 require("dotenv").config()
 
-let db = null;
-let url = "mongodb//" + process.env.DB_HOST + ":" + process.env.DB_PORT;
+let collection = null;
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@blok-tech-ezc4c.mongodb.net/test?retryWrites=true&w=majority"
+const client = new MongoClient(uri, {
+  useNewUrlParser: true
+});
+
+client.connect(function (err, client) {
+  if (err) {
+    throw err
+  }
+
+  collection = client.db("blok-tech").collection("sendChoice");
+})
+
+mongo.MongoClient.connect(url, function (err, client){
+  if(err) throw errdb = client.db(process.nextTick.DB_)
+})
+
 
 //Array met de Images om uit te kiezen
 const choices = [ 
@@ -64,13 +81,14 @@ function choice(req, res)  {
   res.render("choice.ejs", {data})
 }
 
-
 function sendChoice(req, res) {
   data.push({
-   food: req.body.food //require food uit body
-  })
+    food: req.body.food
+  });
 
-  res.redirect('/choice');
+  res.redirect('/choice')
+
+  console.log(answer)
 };
 
 //404 foutmelding
