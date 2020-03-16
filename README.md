@@ -2,6 +2,8 @@
 Dit is een feature om gebruikers door middel van het kiezen van hun favoriete eten 
 een passende partner te vinden. 
 
+![FOODIE feature](https://i.ibb.co/ZYn5DM5/foodie.png)
+
 ## USAGE
 `$ git clone https://github.com/hihijenny/blok-tech.git`
 Of download een zip 
