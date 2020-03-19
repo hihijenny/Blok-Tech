@@ -35,7 +35,7 @@ const choices = [
   "images/burger.jpg",
   "images/hot-dog.jpg",
   "images/pasta.jpg",
-  "images/pizza.jpeg"
+  "images/pizza.jpg"
  ]
 
  //genereren van een random afbeelding uit de array

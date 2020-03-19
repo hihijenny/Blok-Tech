@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Alatsi|Roboto+Condensed:300,400&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alatsi|Roboto+Condensed:300,400&display=swap" rel="stylesheet">
+</head>
+
     <body>
-<header> 
+        <header>  
+          
+            <a href="#"><img src="images/icons/logo.png"></a>
+            
+      </header>
 
-    <nav>
-
-        <a><img class="logo" src="Images/icons/logo.png"></a>
-
-        <ul>
-            <li><a><img src="Images/icons/like.svg"></a></li>
-            <li><a><img src="Images/icons/comment.svg"></a></li>
-            <li><a><img src="Images/icons/account.svg"></a></li>
-        </ul>
-    </nav>
-</header>
-        <main>
-     <section> 
+      <main>
+        <section class="choice">
          <h1>What do you like the most?</h1>
-        <section class="wrapper">
-           
-            <img src="Images/tacos.jpg"> 
-            <p>or</p>
-            <img src="Images/burrito.jpg"> 
-        </section>
-        <h3>None of the above</h3>
-        <div class="knop"> <h4>Finish</h4> </div>
-     </section> 
-    </main>
+      <form action=/sendChoice method="POST">
+      
+        <label>
+          <input class="choice1" type="radio" name="food" value="1">
+          <img src= <%= data.img1 %>>
+        </label>
+        
+        <label>
+          <input type="radio" name="food" value="2">
+          <img src= <%= data.img2 %>>
+        </label>
+      
+      <button type="submit"> Choose this</button>
+      
+      
+      </form>
+      </section>
+      </main>
+      <footer>
+        <nav>
+            <ul>
+                <li><a><img src="images/icons/like.svg"></a></li>
+                 <li><a><img src="images/icons/like.svg"></a></li>
+                 <li><a><img src="images/icons/like.svg"></a></li>
+                </ul>
+        </nav>
+    </footer>
 
     </body>
 </html>
