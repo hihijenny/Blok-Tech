@@ -45,6 +45,9 @@ main img {
 
 
 /*/ FORMFIELD /*/ 
+fieldset {
+    border: none;
+}
 
 [type=radio] {
     position: absolute;

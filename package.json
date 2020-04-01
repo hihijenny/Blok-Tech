@@ -9,12 +9,13 @@
   "author": "Jenny",
   "license": "ISC",
   "dependencies": {
-    "slug": "^2.1.1",
-    "ejs": "^3.0.1",
     "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "mongodb": "^3.5.5"
-  }, 
+    "mongodb": "^3.5.5",
+    "mongoose": "^5.9.7",
+    "slug": "^2.1.1"
+  },
   "devDependencies": {
     "nodemon": "^2.0.2"
   }

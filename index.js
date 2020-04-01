@@ -3,8 +3,8 @@ const app = express();
 const ejs = require("ejs");
 const bodyParser = require('body-parser');
 const mongo = require("mongodb");
-const slug = require("slug");
 const port = 3000;
+
 
 require("dotenv").config()
 
@@ -47,7 +47,6 @@ const random = () => {
 let image1 = random();
 let image2 = random(); 
 
-
 //object om data uit te halen en naar de ejs template te sturen
 const data = {
   id: "profiel",
@@ -59,7 +58,7 @@ const data = {
 //zorgt er voor dat je nooit twee keer dezelfde img terug krijgt
 while (image1 === image2) {
   image1 = random()
-};
+}
 
 //log welke img er worden getoond
 console.log(image1);
@@ -86,6 +85,7 @@ function sendChoice(req, res) {
   collection.insertOne({
     food: req.body.food
   })
+  
  console.log(req.body.food);
    res.redirect('/choice')
  

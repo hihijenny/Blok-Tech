@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 
-  
 <%- include("head.ejs") %>
     <body>
 
-      <%- include("header.ejs") %>
+        <%- include("header.ejs") %>
 
-<main>
-  <section class="choice">
-   <h1>What do you like the most?</h1>
-<form action=/sendChoice method="POST">
+            <main>
+                <section class="choice">
+                    <h1>What do you like the most?</h1>
+                    <form action=/sendChoice method="POST">
 
-  <label>
-    <input class="choice1" type="radio" name="food" value="1">
-    <img src= <%= data.img1 %>>
-  </label>
-  
-  <label>
-    <input type="radio" name="food" value="2">
-    <img src= <%= data.img2 %>>
-  </label>
+                        <label>
+                            <input class="choice1" type="radio" name="food" value="1">
+                            <img src=<%= data.img1 %>>
+                        </label>
 
-<button type="submit"> Choose this</button>
+                        <label>
+                            <input type="radio" name="food" value="2">
+                            <img src=<%= data.img2 %>>
+                        </label>
 
+                        <button type="submit">
+                            Choose this</button>
 
-</form>
-</section>
-</main>
+                    </form>
+                </section>
+            </main>
 
-<%- include("footer.ejs") %>
+            <%- include("footer.ejs") %>
 
+                <script src="index.js"></script>
+            </body>
 
-
-
-<script src="index.js"></script>
-    </body>
-
-</html>
+        </html>

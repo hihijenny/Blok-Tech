@@ -1,20 +1,68 @@
+
 <!DOCTYPE html>
-<html lang="">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-    <meta name="author" content="Jenny Nijhof">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-   
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alatsi|Roboto+Condensed:300,400&display=swap" rel="stylesheet">
 </head>
 
-<body>
+    <body>
+
+        
+      <header>  
+          
+            <a href="#"><img src="images/icons/logo.png"></a>
+            
+      </header>
 
 
-<h1> Dit is een index pagina</h1>
+            <main>
+                <section class="choice">
+                    <h1>What do you like the most?</h1>
+                    <form action=/sendChoice method="POST">
 
-</body>
+                        <label>
+                            <input class="choice1" type="radio" name="food" value="1">
+                            <img src=images/tacos.jpg>
+                        </label>
 
-</html>
+                        <label>
+                            <input type="radio" name="food" value="2">
+                            <img src=images/hot-dog.jpg>
+                        </label>
+
+                        <button type="submit">
+                            Choose this</button>
+
+                    </form>
+                </section>
+            </main>
+
+            <footer>
+    <nav>
+        <ul>
+            <li>
+                <a>
+                    <img src="images/icons/like.svg"></a>
+                </li>
+                <li>
+                    <a>
+                        <img src="images/icons/like.svg"></a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="images/icons/like.svg"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+
+                <script src="index.js"></script>
+            </body>
+
+        </html>
