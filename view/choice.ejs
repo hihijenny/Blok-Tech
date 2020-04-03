@@ -8,20 +8,49 @@
             <main>
                 <section class="choice">
                     <h1>What do you like the most?</h1>
-                    <form action=/sendChoice method="POST">
-
+                    <form class="foodform" action=/sendChoice method="POST">
+                        <fieldset class="tab">
                         <label>
-                            <input class="choice1" type="radio" name="food" value="1">
+                            <input class="choice1" type="radio" name="food1" value="food1" required>
                             <img src=<%= data.img1 %>>
                         </label>
 
                         <label>
-                            <input type="radio" name="food" value="2">
+                            <input type="radio" name="food1" value="food2">
                             <img src=<%= data.img2 %>>
                         </label>
+                        </fieldset>
 
-                        <button type="submit">
-                            Choose this</button>
+                        <fieldset class="tab">
+                            <label>
+                                <input class="choice1" type="radio" name="food" value="3" required>
+                                <img src=<%= data.img1 %>>
+                            </label>
+    
+                            <label>
+                                <input type="radio" name="food" value="4">
+                                <img src=<%= data.img2 %>>
+                            </label>
+                            </fieldset>
+
+                            <fieldset class="tab">
+                                <label>
+                                    <input class="choice1" type="radio" name="food" value="5" required>
+                                    <img src=<%= data.img1 %>>
+                                </label>
+        
+                                <label>
+                                    <input type="radio" name="food" value="6">
+                                    <img src=<%= data.img2 %>>
+                                </label>
+                                </fieldset>
+
+                                <div>
+                                    <button type="button" class='back' onclick="nextPrev(-1)">Back</button>
+                                    <button type="button" class='next' onclick="nextPrev(1)">Next</button>
+                                  </div>
+                        <!-- <button type="submit">
+                            Choose this</button> -->
 
                     </form>
                 </section>
@@ -29,7 +58,7 @@
 
             <%- include("footer.ejs") %>
 
-                <script src="index.js"></script>
+                
             </body>
-
+            <script src="script.js"></script>
         </html>

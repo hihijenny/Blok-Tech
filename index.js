@@ -1,3 +1,4 @@
+
 const express = require('express');
 const app = express();
 const ejs = require("ejs");
@@ -46,19 +47,21 @@ const random = () => {
 //toewijzen van een random img aan de variabele
 let image1 = random();
 let image2 = random(); 
+let image3 = random(); 
 
 //object om data uit te halen en naar de ejs template te sturen
 const data = {
   id: "profiel",
   naam: "Jenny Nijhof",
   img1: choices[image1],
-  img2: choices[image2]
+  img2: choices[image2],
 };
 
 //zorgt er voor dat je nooit twee keer dezelfde img terug krijgt
 while (image1 === image2) {
   image1 = random()
 }
+
 
 //log welke img er worden getoond
 console.log(image1);
@@ -81,16 +84,24 @@ function choice(req, res)  {
   res.render("choice.ejs", {data})
 }
 
-function sendChoice(req, res) {
+function sendChoice(req, res, next) {
   collection.insertOne({
-    food: req.body.food
-  })
-  
- console.log(req.body.food);
-   res.redirect('/choice')
- 
+    Interest1: req.body.food1,
+    Interest2: req.body.food2,
+    Interest3: req.body.food3
+  }, done)
+
+  function done(err, data) {
+    if (err) {
+      next(err)
+    } else {
+      res.redirect('/')
+    }
+  }
+}
+
    
- };
+ 
 
 //404 foutmelding
 app.use(function(req, res) {

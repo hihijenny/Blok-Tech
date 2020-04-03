@@ -6,7 +6,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="public/style.css"> -->
+    <link rel="stylesheet" href="public/style.css">
     <link
         href="https://fonts.googleapis.com/css?family=Alatsi|Roboto+Condensed:300,400&display=swap"
         rel="stylesheet">
@@ -23,39 +23,39 @@
     <main>
         <section class="choice">
             <h1>What do you like the most?</h1>
-            <form action=/sendChoice method="POST">
+            <form class="form" action=/sendChoice method="POST">
                 <fieldset>
-                    <label>
-                        <input class="choice1" type="radio" name="food" value="1">
+                    <label class="fieldset1">
+                        <input type="radio" name="food1" value="tacos" required>
                         <img src="public/images/tacos.jpg" alt="Tacos">
                     </label>
 
-                    <label>
-                        <input type="radio" name="food" value="2">
+                    <label class="fieldset1">
+                        <input type="radio" name="food1" value="burrito" >
                         <img src="public/images/burrito.jpg" alt="Burrito">
                     </label>
                 </fieldset>
 
                 <fieldset>
-                    <label>
-                        <input class="choice1" type="radio" name="food" value="1">
+                    <label class="fieldset2">
+                        <input type="radio" name="food2" value="burger" required>
                         <img src="public/images/burger.jpg" alt="Burger">
                     </label>
 
-                    <label>
-                        <input type="radio" name="food" value="2">
+                    <label class="fieldset2">
+                        <input type="radio" name="food2" value="hot-dog" >
                         <img src="public/images/hot-dog.jpg" alt="Hot Dog">
                     </label>
                 </fieldset>
 
                 <fieldset>
-                    <label>
-                        <input class="choice1" type="radio" name="food" value="1">
+                    <label class="fieldset3">
+                        <input type="radio" name="food3" value="pasta" required>
                         <img src="public/images/pasta.jpg" alt="Pasta">
                     </label>
 
-                    <label>
-                        <input type="radio" name="food" value="2">
+                    <label class="fieldset3">
+                        <input type="radio" name="food3" value="pizza">
                         <img src="public/images/pizza.jpg" alt="Pizza">
                     </label>
                 </fieldset>
@@ -87,7 +87,8 @@
         </nav>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="public/script.js"></script>
 </body>
 
 </html>
+
