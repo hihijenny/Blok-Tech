@@ -1,6 +1,7 @@
 * {
     margin: 0;
     list-style-type: none;
+    box-sizing: border-box;
 }
 
 html {
@@ -33,35 +34,29 @@ h1 {
     font-family: 'Alatsi', sans-serif;
     text-align: center;
     font-size: 1.5em;
+    margin: 8% 0 0 0;
 }
+
 .choice {
     width: 100%;
 }
 
 main img {
     width: 100%;
+    padding: 0;
 }
 
 
-/*/ FORMFIELD /*/ 
-.foodform {
-    display: flex;
-    flex-direction: column;
-}
+/*/ FORMFIELD /*/
 
-.tab {
-    width: 30%;
-    height: 20%;
-  
-  }
-
-.tab:nth-of-type(2){
-    margin-left: 20%;
-}
 
 fieldset {
+    display: inline;
     border: none;
+    margin: 10% 0 10% 0;
 }
+
+
 
 [type=radio] {
     position: absolute;
@@ -75,7 +70,7 @@ fieldset {
 }
 
 [type=radio]:checked + img {
-    filter: grayscale(100%);
+    border: 3px solid #FFBAAC;
 }
 
 
@@ -128,23 +123,25 @@ ul {
     }
 
     /* MAIN */
-    form {
-        width: 70%;
-        display: flex;
-        justify-content: center;
+    h1 {
+        font-size: 2em;
+        margin: 3% 0 0 0;
+    }
+    section {
+        height: 50%;
+    }
 
-        margin: auto;
-    }
-    
-    label {
-        width: 100%;
-    }
-    main img {
+    .choice {
         height: 100%;
-        width: 100%;
-        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: -2% 0 0 0;
     }
-   
+
+    main img {
+        width: 80%;
+    }
+
     button {
         height: 4vw;
         width: 10vw;

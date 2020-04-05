@@ -3,6 +3,7 @@ const app = express();
 const ejs = require("ejs");
 const bodyParser = require('body-parser');
 const mongo = require("mongodb");
+// const sessions = require("express-session");
 const port = 3000;
 
 require("dotenv").config()
@@ -66,14 +67,25 @@ app
   .set("view engine", "ejs")
   .set("views", "view")
   .use(bodyParser.urlencoded({extended: true}))
+  // .use(session({
+  //   resave: false,
+  //   saveUninitialized: true,
+  //   secret: process.env.SESSION_SECRET
+  // }))
+
   .post("/sendChoice", sendChoice)
-  .get ("/choice", choice)
+  .get("/choice", choice)
+  .get("/answers", answers)
 
 function choice(req, res)  {
   res.render("choice.ejs", {data})
 }
 
-function sendChoice(req, res, next) {
+function answers(req, res) {
+  res.render("answers.ejs", {data}) 
+}
+
+  function sendChoice(req, res, next) {
   collection.insertOne({
     Interest1: req.body.food1,
     Interest2: req.body.food2,
@@ -84,10 +96,11 @@ function sendChoice(req, res, next) {
     if (err) {
       next(err)
     } else {
-      res.redirect('/choice')
+      res.redirect('/answers')
     }
   }
 }
+
 
 //404 foutmelding
 app.use(function(req, res) {
