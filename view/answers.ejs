@@ -3,10 +3,44 @@
     <body>
         <%- include("header.ejs") %>
             <main>
-                <h1>These are your answers</h1>
-             
-                
-
+                <h1>Are you sure about your answers?</h1>
+    
+                <form action=/updateAnswer method="POST" class="choice">
+                    <fieldset>
+                        <label>
+                        <input class="choice1" type="radio" name="food1" value="<%= formData.imageSet1[0].name %>" <% if (formData.imageSet1[0].selected) { %> checked <% } %> required>
+                            <img src=<%= formData.imageSet1[0].imageUrl %>>
+                        </label>
+                        <label>
+                            <input type="radio" name="food1" value="<%= formData.imageSet1[1].name %>" <% if (formData.imageSet1[1].selected) { %> checked <% } %>>
+                            <img src=<%= formData.imageSet1[1].imageUrl %>>
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            <input class="choice1" type="radio" name="food2" value="<%= formData.imageSet2[0].name %>" <% if (formData.imageSet2[0].selected) { %> checked <% } %> required>
+                            <img src=<%= formData.imageSet2[0].imageUrl %>>
+                        </label>
+                        <label>
+                            <input type="radio" name="food2" value="<%= formData.imageSet2[1].name %>" <% if (formData.imageSet2[1].selected) { %> checked <% } %>>
+                            <img src=<%= formData.imageSet2[1].imageUrl %>>
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            <input class="choice1" type="radio" name="food3" value="<%= formData.imageSet3[0].name %>" <% if (formData.imageSet3[0].selected) { %> checked <% } %> required>
+                            <img src=<%= formData.imageSet3[0].imageUrl %>>
+                        </label>
+                        <label>
+                            <input type="radio" name="food3" value="<%= formData.imageSet3[1].name %>" <% if (formData.imageSet1[0].selected) { %> checked <% } %>>
+                            <img src=<%= formData.imageSet3[1].imageUrl %>>
+                        </label>
+                    </fieldset>
+                    <button type="submit">
+                        Update answer
+                    </button>
+                </form>
+            </main>
         <%- include("footer.ejs") %>
     </body>
     <script src="script.js"></script>

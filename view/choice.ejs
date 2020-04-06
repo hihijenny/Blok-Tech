@@ -8,35 +8,32 @@
                     <form action=/sendChoice method="POST" class = "choice">
                         <fieldset>
                             <label>
-                                <input class="choice1" type="radio" name="food1" value="<%= data.imageSet1[0].name %>" required>
-                                <img src=<%= data.imageSet1[0].imageUrl %>>
+                                <input class="choice1" type="radio" name="food1" value="<%= formData.imageSet1[0].name %>" required>
+                                <img src=<%= formData.imageSet1[0].imageUrl %>>
                             </label>
-                    
                             <label>
-                                <input type="radio" name="food1" value="<%= data.imageSet1[1].name %>">
-                                <img src=<%= data.imageSet1[1].imageUrl %>>
-                            </label>
-                        </fieldset>
-                        <fieldset>
-                            <label>
-                                <input class="choice1" type="radio" name="food2" value="<%= data.imageSet2[0].name %>" required>
-                                <img src=<%= data.imageSet2[0].imageUrl %>>
-                            </label>
-                       
-                            <label>
-                                <input type="radio" name="food2" value="<%= data.imageSet2[1].name %>">
-                                <img src=<%= data.imageSet2[1].imageUrl %>>
+                                <input type="radio" name="food1" value="<%= formData.imageSet1[1].name %>">
+                                <img src=<%= formData.imageSet1[1].imageUrl %>>
                             </label>
                         </fieldset>
                         <fieldset>
                             <label>
-                                <input class="choice1" type="radio" name="food3" value="<%= data.imageSet3[0].name %>" required>
-                                <img src=<%= data.imageSet3[0].imageUrl %>>
+                                <input class="choice1" type="radio" name="food2" value="<%= formData.imageSet2[0].name %>" required>
+                                <img src=<%= formData.imageSet2[0].imageUrl %>>
                             </label>
-                            
                             <label>
-                                <input type="radio" name="food3" value="<%= data.imageSet3[1].name %>">
-                                <img src=<%= data.imageSet3[1].imageUrl %>>
+                                <input type="radio" name="food2" value="<%= formData.imageSet2[1].name %>">
+                                <img src=<%= formData.imageSet2[1].imageUrl %>>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <label>
+                                <input class="choice1" type="radio" name="food3" value="<%= formData.imageSet3[0].name %>" required>
+                                <img src=<%= formData.imageSet3[0].imageUrl %>>
+                            </label>
+                            <label>
+                                <input type="radio" name="food3" value="<%= formData.imageSet3[1].name %>">
+                                <img src=<%= formData.imageSet3[1].imageUrl %>>
                             </label>
                         </fieldset>
                         <button type="submit">
