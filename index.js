@@ -25,40 +25,46 @@ client.connect(function (err, client) {
 })
 
 //Array met de Objects om uit te kiezen, selected staat op false omdat er nog niks is geselecteerd
-const choices = [
-  { imageUrl: "images/burrito.jpg", name:"burrito", selected: false },
-  { imageUrl: "images/tacos.jpg", name:"tacos", selected: false },
-  { imageUrl: "images/burger.jpg", name:"burger", selected: false },
-  { imageUrl: "images/hot-dog.jpg", name:"hot-dog", selected: false},
-  { imageUrl: "images/pasta.jpg", name:"pasta", selected: false },
-  { imageUrl: "images/pizza.jpg", name:"pizza", selected: false }
- ]
+// const choices = [
+//   { imageUrl: "images/burrito.jpg", name:"burrito", selected: false },
+//   { imageUrl: "images/tacos.jpg", name:"tacos", selected: false },
+//   { imageUrl: "images/burger.jpg", name:"burger", selected: false },
+//   { imageUrl: "images/hot-dog.jpg", name:"hot-dog", selected: false},
+//   { imageUrl: "images/pasta.jpg", name:"pasta", selected: false },
+//   { imageUrl: "images/pizza.jpg", name:"pizza", selected: false }
+//  ]
 
 //genereren van een afbeelding uit de Array
-const getImage = () => {
-  return choices[(Math.floor(Math.random() * Math.floor(choices.length)))]
-}
+// const getImage = () => {
+//   for ( i = 0; i < choices.length; i++)
+//   returnchoices[i]
+// }
 
  //genereren van een random afbeelding uit de array
-const getImageSet = () => {
-  let image1 = getImage();
-  let image2 = getImage();
+// const getImageSet = () => {
+//   let image1 = getImage();
+//   let image2 = getImage();
 
   //zorgt dat image1 en image2 niet het zelfde zijn
-  while (image1 === image2) {
-    image1 = getImage()
-  }
+  // while (image1 === image2) {
+  //   image1 = getImage()
+  // }
 
-  return [image1, image2]
-}
+//   return [image1, image2]
+// }
 
 //object om data uit te halen en naar de ejs template te sturen
 const formData = {
   id: '', //lege id om een id in op te slaan
   naam: "Jenny Nijhof",
-  imageSet1: getImageSet(),
-  imageSet2: getImageSet(),
-  imageSet3: getImageSet()
+  imageSet1: [{ imageUrl: "images/burrito.jpg", name:"burrito", selected: false },
+  { imageUrl: "images/tacos.jpg", name:"tacos", selected: false }],
+
+  imageSet2: [{ imageUrl: "images/burger.jpg", name:"burger", selected: false },
+  { imageUrl: "images/hot-dog.jpg", name:"hot-dog", selected: false}],
+
+  imageSet3: [{ imageUrl: "images/pasta.jpg", name:"pasta", selected: false },
+  { imageUrl: "images/pizza.jpg", name:"pizza", selected: false }]
 };
 
 //routes

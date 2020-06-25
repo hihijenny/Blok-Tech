@@ -22,23 +22,42 @@
 
 
             <main>
-                <section class="choice">
+                <section>
                     <h1>What do you like the most?</h1>
-                    <form action=/sendChoice method="POST">
-
-                        <label>
-                            <input class="choice1" type="radio" name="food" value="1">
-                            <img src=images/tacos.jpg>
-                        </label>
-
-                        <label>
-                            <input type="radio" name="food" value="2">
-                            <img src=images/hot-dog.jpg>
-                        </label>
-
+                    <form action=/sendChoice method="POST" class = "choice">
+                        <fieldset>
+                            <label>
+                                <input class="choice1" type="radio" name="food1" value="burrito" required>
+                                <img src=images/burrito.jpg>
+                            </label>
+                            <label>
+                                <input type="radio" name="food1" value="tacos">
+                                <img src=images/tacos.jpg>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <label>
+                                <input class="choice1" type="radio" name="food2" value="burger" required>
+                                <img src=images/burger.jpg>
+                            </label>
+                            <label>
+                                <input type="radio" name="food2" value="hot-dog">
+                                <img src=images/hot-dog.jpg>
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <label>
+                                <input class="choice1" type="radio" name="food3" value="pasta" required>
+                                <img src=images/pasta.jpg>
+                            </label>
+                            <label>
+                                <input type="radio" name="food3" value="pizza">
+                                <img src=images/pizza.jpg>
+                            </label>
+                        </fieldset>
                         <button type="submit">
-                            Choose this</button>
-
+                            Choose this
+                        </button>
                     </form>
                 </section>
             </main>
