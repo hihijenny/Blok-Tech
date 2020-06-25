@@ -50,7 +50,7 @@ main img {
 /*/ FORMFIELD /*/
 
 
-fieldset {
+.food-choices {
     display: inline;
     border: none;
     margin: 10% 0 10% 0;
@@ -94,13 +94,6 @@ button {
 
 /*/FOOTER/*/
 
-footer {
-    height: 20vw;
-    width: 100vw;
-    background-color: #3E3E3E;
-    position: absolute;
-    bottom: 0;
-}
 
 ul {
     width: 70vw;
@@ -131,11 +124,9 @@ ul {
        
     }
 
-    .choice {
-        height: 100%;
+    .form { 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        margin: -2% 0 0 0;
     }
 
     main img {

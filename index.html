@@ -24,7 +24,7 @@
         <section class="choice">
             <h1>What do you like the most?</h1>
             <form class="form" action=/sendChoice method="POST">
-                <fieldset>
+                <div class="food-choices">
                     <label class="fieldset1">
                         <input type="radio" name="food1" value="tacos" required>
                         <img src="public/images/tacos.jpg" alt="Tacos">
@@ -34,9 +34,9 @@
                         <input type="radio" name="food1" value="burrito" >
                         <img src="public/images/burrito.jpg" alt="Burrito">
                     </label>
-                </fieldset>
+                </div>
 
-                <fieldset>
+                <div class="food-choices">
                     <label class="fieldset2">
                         <input type="radio" name="food2" value="burger" required>
                         <img src="public/images/burger.jpg" alt="Burger">
@@ -46,9 +46,9 @@
                         <input type="radio" name="food2" value="hot-dog" >
                         <img src="public/images/hot-dog.jpg" alt="Hot Dog">
                     </label>
-                </fieldset>
+                </div>
 
-                <fieldset>
+                <div class="food-choices">
                     <label class="fieldset3">
                         <input type="radio" name="food3" value="pasta" required>
                         <img src="public/images/pasta.jpg" alt="Pasta">
@@ -58,7 +58,7 @@
                         <input type="radio" name="food3" value="pizza">
                         <img src="public/images/pizza.jpg" alt="Pizza">
                     </label>
-                </fieldset>
+                </div>
 
                 <button name="button" type="submit">
                     Choose this</button>
@@ -87,7 +87,7 @@
         </nav>
     </footer>
 
-    <script src="public/script.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
