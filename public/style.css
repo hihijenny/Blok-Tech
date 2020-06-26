@@ -129,8 +129,19 @@ ul {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .food-choices {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        margin: 5%;
+    }
+
+    .fieldset1 {
+        display: block;
+        padding: 0;
+    }
+
     main img {
-        width: 80%;
+        width: 100%;
     }
 
     button {
