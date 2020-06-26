@@ -48,3 +48,6 @@ function nextPrev(n) {
 
 ///w3schools.com. (z.d.). How To Create a Form With Multiple Steps. 
 ///Geraadpleegd op 25 juni 2020, van https://www.w3schools.com/howto/howto_js_form_steps.asp
+
+///Karataev, E. (2019, 6 juli). Set CSS styles with javascript. 
+///Geraadpleegd op 26 juni 2020, van https://dev.to/karataev/set-css-styles-with-javascript-3nl5
