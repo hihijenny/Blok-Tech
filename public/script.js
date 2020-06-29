@@ -1,4 +1,4 @@
-var style = document.createElement('style');
+var style = document.createElement('style'); // maakt style element aan
   style.innerHTML = `
   .form {
     grid-template-columns: 4fr;
@@ -14,16 +14,16 @@ var style = document.createElement('style');
 var tabs = document.querySelectorAll(".choice .food-choices");
 console.log(tabs);
 for(let i = 0; i < tabs.length; i++){
-  tabs[i].style.display = 'none';
+  tabs[i].style.display = 'none'; //tabs staan op display: none
 }
 
 var nextButton = document.querySelector('button');
 nextButton.type = 'button';
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
+var currentTab = 0; // Huidige tab is 0
+showTab(currentTab); // Laat de huidige tab zien
 
 function showTab(n) {
-  // This function will display the specified tab of the form ...
+  // Laat het tab zien door op display: grid te zetten
   var x = document.getElementsByClassName("food-choices");
   x[n].style.display = "grid";
 }
@@ -32,17 +32,16 @@ function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("food-choices");
 
-  // Hide the current tab:
+  // Verberg de huidige tab
   x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
-  // if you have reached the end of the form... :
+  // Als je aan het einde van je form komt word deze gesubmit 
   if (currentTab >= x.length) {
-    //...the form gets submitted:
+   
     document.getElementById("form").submit();
     return false;
   }
-  // Otherwise, display the correct tab:
+  // En anders laat de huidige tab zien
   showTab(currentTab);
 }
 
