@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <head>
@@ -7,81 +6,71 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Alatsi|Roboto+Condensed:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Alatsi|Roboto+Condensed:300,400&display=swap"
+        rel="stylesheet">
 </head>
 
-    <body>
+<body>
 
-        
-      <header>  
-          
-            <a href="#"><img src="images/icons/logo.png"></a>
-            
-      </header>
+    <header>
+
+        <a href="#"><img src="public/images/icons/logo.png"></a>
+
+    </header>
+
+    <main>
+        <section class="choice">
+            <h1>What do you like the most?</h1>
+            <form class="form" action="" method="POST">
+                <div class="food-choices">
+                    <label class="fieldset1">
+                        <input type="radio" name="food1" value="tacos" required>
+                        <img src="public/images/tacos.jpg" alt="Tacos">
+                    </label>
+
+                    <label class="fieldset1">
+                        <input type="radio" name="food1" value="burrito" >
+                        <img src="public/images/burrito.jpg" alt="Burrito">
+                    </label>
+                </div>
+
+                <div class="food-choices">
+                    <label class="fieldset2">
+                        <input type="radio" name="food2" value="burger" required>
+                        <img src="public/images/burger.jpg" alt="Burger">
+                    </label>
+
+                    <label class="fieldset2">
+                        <input type="radio" name="food2" value="hot-dog" >
+                        <img src="public/images/hot-dog.jpg" alt="Hot Dog">
+                    </label>
+                </div>
+
+                <div class="food-choices">
+                    <label class="fieldset3">
+                        <input type="radio" name="food3" value="pasta" required>
+                        <img src="public/images/pasta.jpg" alt="Pasta">
+                    </label>
+
+                    <label class="fieldset3">
+                        <input type="radio" name="food3" value="pizza">
+                        <img src="public/images/pizza.jpg" alt="Pizza">
+                    </label>
+                </div>
+
+                <button type="submit" onclick="nextPrev(1)">Next</button>
 
 
-            <main>
-                <section>
-                    <h1>What do you like the most?</h1>
-                    <form action=/sendChoice method="POST" class = "choice">
-                        <div>
-                            <label>
-                                <input class="choice1" type="radio" name="food1" value="burrito" required>
-                                <img src=images/burrito.jpg>
-                            </label>
-                            <label>
-                                <input type="radio" name="food1" value="tacos">
-                                <img src=images/tacos.jpg>
-                            </label>
-                        </div>
-                        <div>
-                            <label>
-                                <input class="choice1" type="radio" name="food2" value="burger" required>
-                                <img src=images/burger.jpg>
-                            </label>
-                            <label>
-                                <input type="radio" name="food2" value="hot-dog">
-                                <img src=images/hot-dog.jpg>
-                            </label>
-                        </div>
-                        <div>
-                            <label>
-                                <input class="choice1" type="radio" name="food3" value="pasta" required>
-                                <img src=images/pasta.jpg>
-                            </label>
-                            <label>
-                                <input type="radio" name="food3" value="pizza">
-                                <img src=images/pizza.jpg>
-                            </label>
-                        </div>
-                        <button type="submit">
-                            Choose this
-                        </button>
-                    </form>
-                </section>
-            </main>
+            </form>
 
-            <footer>
-    <nav>
-        <ul>
-            <li>
-                <a>
-                    <img src="images/icons/like.svg"></a>
-                </li>
-                <li>
-                    <a>
-                        <img src="images/icons/like.svg"></a>
-                    </li>
-                    <li>
-                        <a>
-                            <img src="images/icons/like.svg"></a>
-                        </li>
-                    </ul>
-                </nav>
-            </footer>
+        </section>
+    </main>
 
-                <script src="index.js"></script>
-            </body>
 
-        </html>
+    <script src="public/script.js"></script>
+</body>
+
+</html>
+
